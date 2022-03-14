@@ -145,7 +145,7 @@ class L10nFrIntrastatServiceDeclaration(models.Model):
                     _("Missing country on partner '%s'.")
                     % invoice.commercial_partner_id.display_name
                 )
-            elif not invoice.commercial_partner_id.country_id.intrastat:
+            elif not invoice.partner_shipping_id.country_id.intrastat:
                 continue
             elif (
                 invoice.commercial_partner_id.country_id.id
